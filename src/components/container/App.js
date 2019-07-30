@@ -1,18 +1,16 @@
-import React, { useReducer, useEffect } from "react";
-import { Header } from "../Header";
-import GlobalStyle from "../../styles/GlobalStyle";
-import InputTodo from "./FormTodo";
-import TodoList from "./TodoList";
+import React, { useReducer, useEffect, Suspense, lazy } from "react";
 import useTodoReducer from "../../hooks/useTodoReducer";
+import GlobalStyle from "../../styles/GlobalStyle";
 
-const Context = React.createContext();
-
-const App = props => {
+export default function App(props) {
+  const Header = lazy(() => import("../Header"));
+  const InputTodo = lazy(() => import("./FormTodo"));
+  const TodoList = lazy(() => import("./TodoList"));
   const [state, dispatch] = useReducer(useTodoReducer, []);
 
   useEffect(() => {
     const raw = localStorage.getItem("data");
-    dispatch({ type: "reset", payload: JSON.parse(raw) });
+    dispatch({ type: "reset", payload: JSON.parse(raw) || [] });
   }, []);
 
   useEffect(() => {
@@ -20,13 +18,15 @@ const App = props => {
   }, [state]);
 
   return (
-    <Context.Provider value={dispatch}>
-      <GlobalStyle />
-      <Header />
-      <InputTodo />
-      <TodoList todos={state} />
-    </Context.Provider>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Context.Provider value={dispatch}>
+        <GlobalStyle />
+        <Header />
+        <InputTodo />
+        <TodoList todos={state} />
+      </Context.Provider>
+    </Suspense>
   );
-};
+}
 
-export { App, Context };
+export const Context = React.createContext();
