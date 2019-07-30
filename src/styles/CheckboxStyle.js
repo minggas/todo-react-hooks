@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const CheckboxStyle = styled.input`
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
   padding: 0.2rem;
 `;
 
