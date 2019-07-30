@@ -10,10 +10,12 @@ const Todo = ({ id, children, isChecked }) => {
   const [editable, setEditable] = useState();
 
   return (
-    <TodoStyle id={id}>
+    <TodoStyle id={id} onDoubleClick={() => setEditable(!editable)}>
       <CheckboxStyle
         type="checkbox"
         checked={isChecked}
+        onChange={() => dispatch({ type: "completeTodo", payload: id })}
+      />
       <ContentStyle
         value={children}
         readOnly={!editable}
@@ -24,7 +26,6 @@ const Todo = ({ id, children, isChecked }) => {
           })
         }
       />
-      <span>{children}</span>
       <DeleteBtnStyle
         onClick={() => {
           dispatch({ type: "deleteTodo", payload: id });

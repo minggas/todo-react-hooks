@@ -8,12 +8,23 @@ export default (state, action) => {
     }
     case "deleteTodo":
       return state.filter((_, index) => index !== action.payload);
-    case "updateTodo":
+    case "completeTodo":
       return state.map((todo, index) => {
         if (index === action.payload) {
           return {
             ...todo,
             isChecked: !todo.isChecked
+          };
+        } else {
+          return { ...todo };
+        }
+      });
+    case "updateTodo":
+      return state.map((todo, index) => {
+        if (index === action.payload.id) {
+          return {
+            ...todo,
+            text: action.payload.text
           };
         } else {
           return { ...todo };
