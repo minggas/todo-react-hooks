@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import TodoStyle from "../styles/TodoStyle";
 import DeleteBtnStyle from "../styles/DeleteBtnStyle";
 import CheckboxStyle from "../styles/CheckboxStyle";
@@ -6,6 +6,7 @@ import { Context } from "./container/App";
 
 const Todo = ({ id, children, isChecked }) => {
   const dispatch = useContext(Context);
+  const [editable, setEditable] = useState();
 
   return (
     <TodoStyle id={id}>
