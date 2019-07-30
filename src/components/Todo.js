@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import TodoStyle from "../styles/TodoStyle";
+import ContentStyle from "../styles/ContentStyle";
 import DeleteBtnStyle from "../styles/DeleteBtnStyle";
 import CheckboxStyle from "../styles/CheckboxStyle";
 import { Context } from "./container/App";
@@ -13,7 +14,15 @@ const Todo = ({ id, children, isChecked }) => {
       <CheckboxStyle
         type="checkbox"
         checked={isChecked}
-        onChange={() => dispatch({ type: "updateTodo", payload: id })}
+      <ContentStyle
+        value={children}
+        readOnly={!editable}
+        onInput={e =>
+          dispatch({
+            type: "updateTodo",
+            payload: { id: id, text: e.target.value }
+          })
+        }
       />
       <span>{children}</span>
       <DeleteBtnStyle
