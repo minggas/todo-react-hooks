@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 const FormTodo = styled.form`
-  width: 100%;
+  margin: 10px auto;
+  width: 90%;
   display: grid;
+  grid-gap: 5px;
   grid-template-columns: 6fr 1fr;
 `;
 
