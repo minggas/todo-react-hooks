@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/todo-react-hooks/static/js/main.349f6898.chunk.js",
+    "main.js.map": "/todo-react-hooks/static/js/main.349f6898.chunk.js.map",
+    "runtime~main.js": "/todo-react-hooks/static/js/runtime~main.4ed2fb54.js",
+    "runtime~main.js.map": "/todo-react-hooks/static/js/runtime~main.4ed2fb54.js.map",
+    "static/js/2.6479cc7e.chunk.js": "/todo-react-hooks/static/js/2.6479cc7e.chunk.js",
+    "static/js/2.6479cc7e.chunk.js.map": "/todo-react-hooks/static/js/2.6479cc7e.chunk.js.map",
+    "static/js/3.0ef3d510.chunk.js": "/todo-react-hooks/static/js/3.0ef3d510.chunk.js",
+    "static/js/3.0ef3d510.chunk.js.map": "/todo-react-hooks/static/js/3.0ef3d510.chunk.js.map",
+    "static/js/4.e0f8463a.chunk.js": "/todo-react-hooks/static/js/4.e0f8463a.chunk.js",
+    "static/js/4.e0f8463a.chunk.js.map": "/todo-react-hooks/static/js/4.e0f8463a.chunk.js.map",
+    "static/js/5.0a077039.chunk.js": "/todo-react-hooks/static/js/5.0a077039.chunk.js",
+    "static/js/5.0a077039.chunk.js.map": "/todo-react-hooks/static/js/5.0a077039.chunk.js.map",
+    "index.html": "/todo-react-hooks/index.html",
+    "precache-manifest.50ba505946e9c631f99efd13a3a34f9a.js": "/todo-react-hooks/precache-manifest.50ba505946e9c631f99efd13a3a34f9a.js",
+    "service-worker.js": "/todo-react-hooks/service-worker.js"
+  }
+}
