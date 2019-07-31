@@ -3,8 +3,8 @@ import styled from "styled-components";
 const InputTodo = styled.input`
   width: 100%;
   height: 2rem;
-  border: 2px solid green;
-  border-radius: 4px;
+  border-radius: 50px;
+  padding: 0.2rem 1rem;
 `;
 
 export default InputTodo;

@@ -9,4 +9,5 @@ export const HeaderStyled = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 1px 2px rgb(30, 30, 30);
 `;

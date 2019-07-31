@@ -1,29 +1,55 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import TodoStyle from "../styles/TodoStyle";
-import DeleteBtnStyle from "../styles/DeleteBtnStyle";
+import ContentStyle from "../styles/ContentStyle";
+import TodoBtnStyle from "../styles/TodoBtnStyle";
 import CheckboxStyle from "../styles/CheckboxStyle";
 import { Context } from "./container/App";
 
-const Todo = ({ id, children, isChecked }) => {
+export default function Todo({ id, children, isChecked }) {
   const dispatch = useContext(Context);
+  const [editable, setEditable] = useState(false);
+  const [current, setCurrent] = useState(children);
+
+  useEffect(() => {
+    setCurrent(children);
+  }, [children]);
 
   return (
     <TodoStyle id={id}>
       <CheckboxStyle
         type="checkbox"
         checked={isChecked}
-        onChange={() => dispatch({ type: "updateTodo", payload: id })}
+        onChange={() => dispatch({ type: "completeTodo", payload: id })}
       />
-      <span>{children}</span>
-      <DeleteBtnStyle
+      <ContentStyle
+        value={current}
+        readOnly={!editable}
+        isChecked={isChecked}
+        onKeyPress={e => {
+          if (e.key === "Enter") {
+            setEditable(!editable);
+          }
+        }}
+        onChange={e => setCurrent(e.target.value)}
+      />
+      <TodoBtnStyle
         onClick={() => {
-          dispatch({ type: "deleteTodo", payload: id });
+          if (editable) {
+            dispatch({
+              type: "updateTodo",
+              payload: { id: id, text: current }
+            });
+          }
+          setEditable(!editable);
         }}
       >
-        X
-      </DeleteBtnStyle>
+        {editable ? "Save" : "Edit"}
+      </TodoBtnStyle>
+      <TodoBtnStyle
+        onClick={() => dispatch({ type: "deleteTodo", payload: id })}
+      >
+        Delete
+      </TodoBtnStyle>
     </TodoStyle>
   );
-};
-
-export default Todo;
+}
