@@ -6,6 +6,7 @@ const FormTodo = styled.form`
   display: grid;
   grid-gap: 5px;
   grid-template-columns: 6fr 1fr;
+  align-items: center;
 `;
 
 export default FormTodo;

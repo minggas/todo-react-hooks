@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import TodoStyle from "../styles/TodoStyle";
-import ContentStyle from "../styles/ContentStyle";
+import { ContentStyle, ContentEditStyle } from "../styles/ContentStyle";
 import TodoBtnStyle from "../styles/TodoBtnStyle";
 import CheckboxStyle from "../styles/CheckboxStyle";
 import { Context } from "./container/App";
@@ -21,17 +21,14 @@ export default function Todo({ id, children, isChecked }) {
         checked={isChecked}
         onChange={() => dispatch({ type: "completeTodo", payload: id })}
       />
-      <ContentStyle
-        value={current}
-        readOnly={!editable}
-        isChecked={isChecked}
-        onKeyPress={e => {
-          if (e.key === "Enter") {
-            setEditable(!editable);
-          }
-        }}
-        onChange={e => setCurrent(e.target.value)}
-      />
+      {editable ? (
+        <ContentEditStyle
+          value={current}
+          onChange={e => setCurrent(e.target.value)}
+        />
+      ) : (
+        <ContentStyle isChecked={isChecked}>{current}</ContentStyle>
+      )}
       <TodoBtnStyle
         onClick={() => {
           if (editable) {
