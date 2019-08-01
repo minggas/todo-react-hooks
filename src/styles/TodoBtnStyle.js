@@ -3,6 +3,7 @@ import styled from "styled-components";
 const TodoBtnStyle = styled.button`
   margin: 5px;
   padding: 0.5rem;
+  height: 2rem;
   border-radius: 5px;
   border: none;
   background-color: ${props => {

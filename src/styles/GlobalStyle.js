@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 :root {
-	--main-bg-color: rgb(200,200,200);
+	--main-bg-color: rgb(250,250,250);
 }
 
   html, body, div, span, applet, object, iframe,
@@ -33,7 +33,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-  width:100vw;
+	width:100vw;
+	background-color: rgb(240,240,240)
 }
 ol, ul {
 	list-style: none;
@@ -57,6 +58,10 @@ button, input[type=submit], input[type=checkbox] {
 	max-width: 500px;
 	margin: 0 auto;
 	border-radius: 5px;
+
+input:focus{
+	border: 1px solid blue;
+}
 }
 `;
 

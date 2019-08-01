@@ -22,12 +22,13 @@ function InputTodo(props) {
         type="text"
         {...bind}
         placeholder="Add your To Do"
-        autoFocus
+        autoFocus={true}
       />
       <Submit
         data-testid="submitRefButton"
         type="submit"
         value="Add"
+        test={value}
         disabled={!value}
       />
     </Form>
