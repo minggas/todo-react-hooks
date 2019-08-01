@@ -15,38 +15,40 @@ export default function Todo({ id, children, isChecked }) {
   }, [children]);
 
   return (
-    <TodoStyle id={id}>
-      <CheckboxStyle
-        type="checkbox"
-        checked={isChecked}
-        onChange={() => dispatch({ type: "completeTodo", payload: id })}
-      />
+    <TodoStyle id={id} onClick={() => setEditable(true)}>
       {editable ? (
-        <ContentEditStyle
-          value={current}
-          onChange={e => setCurrent(e.target.value)}
-        />
+        <>
+          <CheckboxStyle
+            type="checkbox"
+            checked={isChecked}
+            onChange={() => dispatch({ type: "completeTodo", payload: id })}
+          />
+          <ContentEditStyle
+            value={current}
+            onChange={e => setCurrent(e.target.value)}
+          />
+          <TodoBtnStyle
+            onClick={() => {
+              if (editable) {
+                dispatch({
+                  type: "updateTodo",
+                  payload: { id: id, text: current }
+                });
+              }
+              setEditable(false);
+            }}
+          >
+            {editable ? "Save" : "Edit"}
+          </TodoBtnStyle>
+          <TodoBtnStyle
+            onClick={() => dispatch({ type: "deleteTodo", payload: id })}
+          >
+            Delete
+          </TodoBtnStyle>
+        </>
       ) : (
         <ContentStyle isChecked={isChecked}>{current}</ContentStyle>
       )}
-      <TodoBtnStyle
-        onClick={() => {
-          if (editable) {
-            dispatch({
-              type: "updateTodo",
-              payload: { id: id, text: current }
-            });
-          }
-          setEditable(!editable);
-        }}
-      >
-        {editable ? "Save" : "Edit"}
-      </TodoBtnStyle>
-      <TodoBtnStyle
-        onClick={() => dispatch({ type: "deleteTodo", payload: id })}
-      >
-        Delete
-      </TodoBtnStyle>
     </TodoStyle>
   );
 }

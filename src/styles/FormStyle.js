@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
 const FormTodo = styled.form`
-  margin: 10px auto;
-  width: 90%;
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: 6fr 1fr;
-  align-items: center;
+  margin: 0px auto;
+  width: 100%;
+  padding: 15px 10px 5px 10px;
+  background-color: rgb(230, 230, 230);
 `;
 
 export default FormTodo;

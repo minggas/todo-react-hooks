@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import Input from "../../styles/InputStyle";
 import { useInput } from "../../hooks/input-hook";
-import Submit from "../../styles/SubmitStyle";
 import Form from "../../styles/FormStyle";
 import { Context } from "./App";
 
@@ -21,15 +20,8 @@ function InputTodo(props) {
         data-testid="inputName"
         type="text"
         {...bind}
-        placeholder="Add your To Do"
+        placeholder="Add your ToDo title"
         autoFocus={true}
-      />
-      <Submit
-        data-testid="submitRefButton"
-        type="submit"
-        value="Add"
-        test={value}
-        disabled={!value}
       />
     </Form>
   );
