@@ -60,7 +60,7 @@ button, input[type=submit], input[type=checkbox] {
 	border-radius: 5px;
 
 input:focus{
-	border: 1px solid blue;
+	background-color: rgb(210,210,210);
 }
 }
 `;
