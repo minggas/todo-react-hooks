@@ -15,7 +15,7 @@ export default function Todo({ id, children, isChecked }) {
   }, [children]);
 
   return (
-    <TodoStyle id={id} onClick={() => setEditable(true)}>
+    <TodoStyle id={id} editable={editable} onClick={() => setEditable(true)}>
       {editable ? (
         <>
           <CheckboxStyle
