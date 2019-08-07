@@ -1,19 +1,14 @@
 {
   "files": {
-    "main.js": "/todo-react-hooks/static/js/main.f82fbcf9.chunk.js",
-    "main.js.map": "/todo-react-hooks/static/js/main.f82fbcf9.chunk.js.map",
-    "runtime~main.js": "/todo-react-hooks/static/js/runtime~main.cd6d9d12.js",
-    "runtime~main.js.map": "/todo-react-hooks/static/js/runtime~main.cd6d9d12.js.map",
-    "static/js/2.6479cc7e.chunk.js": "/todo-react-hooks/static/js/2.6479cc7e.chunk.js",
-    "static/js/2.6479cc7e.chunk.js.map": "/todo-react-hooks/static/js/2.6479cc7e.chunk.js.map",
-    "static/js/3.21e96ef8.chunk.js": "/todo-react-hooks/static/js/3.21e96ef8.chunk.js",
-    "static/js/3.21e96ef8.chunk.js.map": "/todo-react-hooks/static/js/3.21e96ef8.chunk.js.map",
-    "static/js/4.37699427.chunk.js": "/todo-react-hooks/static/js/4.37699427.chunk.js",
-    "static/js/4.37699427.chunk.js.map": "/todo-react-hooks/static/js/4.37699427.chunk.js.map",
-    "static/js/5.0eda3545.chunk.js": "/todo-react-hooks/static/js/5.0eda3545.chunk.js",
-    "static/js/5.0eda3545.chunk.js.map": "/todo-react-hooks/static/js/5.0eda3545.chunk.js.map",
+    "main.js": "/todo-react-hooks/static/js/main.89380c66.chunk.js",
+    "runtime~main.js": "/todo-react-hooks/static/js/runtime~main.550459a0.js",
+    "static/js/2.b0d8984e.chunk.js": "/todo-react-hooks/static/js/2.b0d8984e.chunk.js",
+    "static/js/3.37091473.chunk.js": "/todo-react-hooks/static/js/3.37091473.chunk.js",
+    "static/js/4.1b4e399c.chunk.js": "/todo-react-hooks/static/js/4.1b4e399c.chunk.js",
+    "static/js/5.6410804f.chunk.js": "/todo-react-hooks/static/js/5.6410804f.chunk.js",
+    "static/js/6.a6cbcb08.chunk.js": "/todo-react-hooks/static/js/6.a6cbcb08.chunk.js",
     "index.html": "/todo-react-hooks/index.html",
-    "precache-manifest.28814f000bbd63a09d325f3656848bcb.js": "/todo-react-hooks/precache-manifest.28814f000bbd63a09d325f3656848bcb.js",
+    "precache-manifest.f35f66174b5d9fdeecd606dcc9368160.js": "/todo-react-hooks/precache-manifest.f35f66174b5d9fdeecd606dcc9368160.js",
     "service-worker.js": "/todo-react-hooks/service-worker.js"
   }
 }
