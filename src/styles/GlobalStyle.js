@@ -12,24 +12,17 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: inherit;
 }
 
-html {
+html, body {
+  margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-}
-
-body {
-  background-color: hsl(0, 1%, 72%);
 }
 
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-  line-height: 1;
-	width:100vw;
-	background-color: rgb(240,240,240)
-}
+
 ol, ul {
 	list-style: none;
 }
@@ -55,12 +48,6 @@ button, input[type=submit], input[type=checkbox] {
 
 input:focus{
 	background-color: rgb(210,210,210);
-}
-
-body {
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
 }
 
 .wrap {
@@ -178,6 +165,7 @@ table th {
   justify-content: center;
   align-items: center;
 }
+
 }
 `;
 
