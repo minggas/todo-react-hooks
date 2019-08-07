@@ -7,7 +7,7 @@ export const ContentEditStyle = styled.textarea`
   background-color: ${props => (props.readOnly ? "transparent" : "white")};
 `;
 
-export const ContentStyle = styled.span`
+export const ContentStyle = styled.div`
   width: 100%;
   padding: 0.5rem;
   overflow-wrap: break-word;

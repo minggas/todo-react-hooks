@@ -6,6 +6,10 @@ const TodoBtnStyle = styled.button`
   height: 2rem;
   border-radius: 5px;
   border: none;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
   background-color: ${props => {
     switch (props.children) {
       case "Delete":

@@ -4,7 +4,7 @@ export default (state, action) => {
       return action.payload;
     case "addTodo": {
       const newTodo = action.payload;
-      return [...state, { text: newTodo, isChecked: false }];
+      return [...state, { title: newTodo, text: "", isChecked: false }];
     }
     case "deleteTodo":
       return state.filter((_, index) => index !== action.payload);
@@ -24,6 +24,7 @@ export default (state, action) => {
         if (index === action.payload.id) {
           return {
             ...todo,
+            title: action.payload.title,
             text: action.payload.text
           };
         } else {
