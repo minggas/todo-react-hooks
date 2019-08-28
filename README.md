@@ -7,6 +7,7 @@
 - [x] As a user I can add a task to my list.
 - [x] As a user I can edit a task on my list.
 - [x] As a user I can delete a task on my list.
+- [x] As a user I can see my list of tasks.
 - [x] As a user I can mark a task on my list as complete.
 - [x] As a user I can add a description to my task.
 - [ ] As a user i can a checklist to my task.
